@@ -30,12 +30,18 @@
     }
   });
 
-  // Music
   $(document).ready(function () {
-    var audio = new Audio("wedding-audio.mp3"); 
+    var audio = new Audio("wedding-audio.mp3");
     audio.loop = true;
-    audio.play().catch(() => console.log("Trình duyệt chặn tự động phát."));
-
+    // audio.muted = true; // Ban đầu tắt tiếng
+    // Phát nhạc ngay khi trang được tải lại
+    audio.play().then(() => {
+      setTimeout(() => {
+        audio.muted = false; // Bật lại âm thanh sau khi đã phát thành công
+      }, 500);
+    }).catch(() => console.log("Trình duyệt chặn tự động phát."));
+  
+    $(".audio-btn").html("🔊"); // Mặc định là đang phát
     $(".audio-btn").click(function () {
       if (audio.paused) {
         audio.play();
@@ -79,6 +85,41 @@
   $(".back-to-top").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
     return false;
+  });
+
+  // Mở popup "Mừng cưới"
+  $("#open-popup").click(function () {
+    $("#popup").fadeIn();
+  });
+
+  // Đóng popup khi nhấn dấu X
+  $(".popup-close").click(function () {
+    $("#popup").fadeOut();
+  });
+
+  // Đóng popup khi nhấn nền mờ
+  $("#popup").click(function (e) {
+    if (e.target.id === "popup") {
+      $("#popup").fadeOut();
+    }
+  });
+
+  // Xử lý popup cảm ơn khi gửi lời chúc
+  $("#sendWish").click(function () {
+    $("#thankYouPopup").fadeIn(); // Hiện popup cảm ơn
+    $("#wishForm")[0].reset(); // Xóa nội dung form
+  });
+
+  // Đóng popup cảm ơn khi nhấn dấu X
+  $(".close-popup-thank").click(function () {
+    $("#thankYouPopup").fadeOut();
+  });
+
+  // Đóng popup cảm ơn khi click ra ngoài
+  $("#thankYouPopup").click(function (e) {
+    if (e.target.id === "thankYouPopup") {
+      $("#thankYouPopup").fadeOut();
+    }
   });
 
   // Gallery carousel
