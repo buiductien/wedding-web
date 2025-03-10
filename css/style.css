@@ -10174,7 +10174,7 @@ a.text-dark:focus {
 /* popup 
  */
 
- .popup {
+.popup {
   display: none; /* Ẩn popup ban đầu */
   position: fixed;
   top: 0;
@@ -10211,12 +10211,11 @@ a.text-dark:focus {
 .popup-close:hover {
   color: darkred;
 }
-.mungcuoi{
+.mungcuoi {
   max-width: 50%; /* Giữ ảnh vừa với cột */
   height: auto; /* Tự động điều chỉnh chiều cao để không méo ảnh */
   aspect-ratio: 1 / 1; /* Giữ tỷ lệ vuông */
 }
-
 
 /* CSS cho popup */
 .popup-overlay-thank {
@@ -10249,11 +10248,35 @@ a.text-dark:focus {
   color: #b58d2e;
 }
 
+.button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Khoảng cách giữa các button */
+}
+
+.map{
+  width: 500px;
+  height: 300px;
+}
+
 @media (max-width: 767.98px) {
   #event .border-right {
     border-right: none !important;
   }
   .popup-content {
     width: 80%;
-}
+  }
+  .button-group {
+    display: flex; 
+    flex-direction: column;
+  }
+  .map{
+    width: 300px; 
+    height: 200px;
+  }
+  .heading-h1{
+    font-size: 45px !important
+  }
 }

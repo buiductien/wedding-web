@@ -36,11 +36,11 @@
     <nav
       class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5"
     >
-      <a href="index.html" class="navbar-brand d-block d-lg-none">
+      <!-- <a href="index.html" class="navbar-brand d-block d-lg-none">
         <h1 class="font-secondary display-1 text-primary">
           Đức Tiến <span class="text-primary">-</span> Mai Gấm
         </h1>
-      </a>
+      </a> -->
       <button
         type="button"
         class="navbar-toggler"
@@ -48,7 +48,6 @@
         data-target="#navbarCollapse"
       >
         <i class="fa fa-bars" aria-hidden="true"></i>
-        <!-- <span class="navbar-toggler-icon"></span> -->
       </button>
       <div
         class="collapse navbar-collapse justify-content-between"
@@ -111,8 +110,8 @@
               class="carousel-caption d-flex flex-column align-items-center justify-content-center"
             >
               <div class="p-3" style="max-width: 900px">
-                <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">
-                  Đức Tiến - Gấm Mai
+                <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4 heading-h1">
+                  Đức Tiến - Mai Gấm
                 </h1>
                 <div
                   class="d-inline-block border-top border-bottom border-light py-3 px-4"
@@ -140,8 +139,8 @@
               class="carousel-caption d-flex flex-column align-items-center justify-content-center"
             >
               <div class="p-3" style="max-width: 900px">
-                <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">
-                  Đức Tiến - Gấm Mai
+                <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4 heading-h1">
+                  Đức Tiến - Mai Gấm
                 </h1>
                 <div
                   class="d-inline-block border-top border-bottom border-light py-3 px-4"
@@ -498,7 +497,14 @@
         <div class="row">
           <div class="col-md-6 border-right border-primary">
             <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-              <img class="img-fluid mb-4" src="img/event-1.JPG" alt="" />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3747.749874090718!2d105.80281447523062!3d20.060916881357194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDAzJzM5LjMiTiAxMDXCsDQ4JzE5LjQiRQ!5e0!3m2!1svi!2s!4v1741614115622!5m2!1svi!2s" 
+              width="600" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              class="map"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
               <h4 class="mb-3">Lễ nạp tài</h4>
               <p class="mb-2">
                 Quan Chiêm <br />Hà Giang - Hà Trung - Thanh Hóa
@@ -508,7 +514,14 @@
           </div>
           <div class="col-md-6">
             <div class="text-center text-md-left ml-md-3">
-              <img class="img-fluid mb-4" src="img/event-2.JPG" alt="" />
+              <!-- <img class="img-fluid mb-4" src="img/event-2.JPG" alt="" /> -->
+              <iframe
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.4263459296535!2d106.60271047605318!3d21.055627380600335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a80ebfd1b1acd%3A0x7d818161a8181943!2zTmjDoCBow6BuZyBI4bqhbmggSMawbmc!5e0!3m2!1svi!2s!4v1741611469247!5m2!1svi!2s" 
+               style="border:0;" 
+               allowfullscreen="" 
+               loading="lazy"
+               class = "map" 
+               referrerpolicy="no-referrer-when-downgrade"></iframe>
               <h4 class="mb-3">Tiệc cưới</h4>
               <p class="mb-2">
                 Nhà hàng Hạnh Hưng <br />
@@ -565,7 +578,7 @@
                   ></textarea>
                 </div>
               </form>
-              <div>
+              <div class="button-group">
                 <button
                   id="sendWish"
                   class="btn btn-primary font-weight-bold py-3 px-5"
@@ -586,8 +599,8 @@
         <!-- pop up mừng cưới -->
         <div id="popup" class="popup" onclick="closePopup()">
           <div class="popup-content" onclick="event.stopPropagation();">
-            <span class="popup-close" onclick="closePopup()">&times;</span>
-            <h4 class="mb-4 text-primary">Chuyển khoản mừng cưới 💖</h4>
+            <!-- <span class="popup-close" onclick="closePopup()">&times;</span> -->
+            <h4 class="mb-4 text-primary">Chúc mừng 2 bạn 💖</h4>
             <div class="row">
               <div class="col-6">
                 <img class="mb-3 mungcuoi" src="img/qr-1.jpg" alt="QR 1" />
@@ -611,10 +624,10 @@
         <!-- Popup cảm ơn -->
         <div id="thankYouPopup" class="popup-overlay-thank">
           <div class="popup-content">
-            <span class="close-popup-thank">&times;</span>
-            <h4 class="text-primary">Cảm ơn bạn!</h4>
+            <!-- <span class="close-popup-thank">&times;</span> -->
+            <h4 class="text-primary">Lời cảm ơn!</h4>
             <p>
-              Lời chúc của bạn đã được gửi thành công. Chúng tôi rất trân trọng!
+              Vợ chòng em xin cảm ơn lời chúc từ bạn. Chúc cho tất cả nhiều sức khoẻ và bình an.
             </p>
           </div>
         </div>
