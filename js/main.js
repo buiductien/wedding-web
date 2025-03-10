@@ -125,8 +125,8 @@
   // Gallery carousel
   $(".gallery-carousel").owlCarousel({
     autoplay: true,
-    smartSpeed: 1000,
-    autoplayTimeout: 2000,
+    smartSpeed: 1500,
+    // autoplayTimeout: 2000,
     dots: false,
     loop: true,
     nav: true,
