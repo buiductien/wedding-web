@@ -35,12 +35,15 @@
     audio.loop = true;
     // audio.muted = true; // Ban đầu tắt tiếng
     // Phát nhạc ngay khi trang được tải lại
-    audio.play().then(() => {
-      setTimeout(() => {
-        audio.muted = false; // Bật lại âm thanh sau khi đã phát thành công
-      }, 500);
-    }).catch(() => console.log("Trình duyệt chặn tự động phát."));
-  
+    audio
+      .play()
+      .then(() => {
+        setTimeout(() => {
+          audio.muted = false; // Bật lại âm thanh sau khi đã phát thành công
+        }, 500);
+      })
+      .catch(() => console.log("Trình duyệt chặn tự động phát."));
+
     $(".audio-btn").html("🔊"); // Mặc định là đang phát
     $(".audio-btn").click(function () {
       if (audio.paused) {
@@ -92,11 +95,6 @@
     $("#popup").fadeIn();
   });
 
-  // Đóng popup khi nhấn dấu X
-  $(".popup-close").click(function () {
-    $("#popup").fadeOut();
-  });
-
   // Đóng popup khi nhấn nền mờ
   $("#popup").click(function (e) {
     if (e.target.id === "popup") {
@@ -110,15 +108,22 @@
     $("#wishForm")[0].reset(); // Xóa nội dung form
   });
 
-  // Đóng popup cảm ơn khi nhấn dấu X
-  $(".close-popup-thank").click(function () {
-    $("#thankYouPopup").fadeOut();
-  });
-
   // Đóng popup cảm ơn khi click ra ngoài
   $("#thankYouPopup").click(function (e) {
     if (e.target.id === "thankYouPopup") {
       $("#thankYouPopup").fadeOut();
+    }
+  });
+
+  // Xử lý popup gửi thư
+  $("#letter").click(function () {
+    $("#letterPopup").fadeIn(); // Hiện popup cảm ơn
+  });
+
+  // Đóng popup gửi thư khi click ra ngoài
+  $("#letterPopup").click(function (e) {
+    if (e.target.id === "letterPopup") {
+      $("#letterPopup").fadeOut();
     }
   });
 
